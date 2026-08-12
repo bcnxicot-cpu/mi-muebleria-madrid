@@ -1,7 +1,8 @@
 import Image from "next/image";
 
-const quoteMail = "mailto:hola@mimuebleria.es?subject=Valoración%20de%20una%20pieza&body=Hola%2C%20quiero%20consultaros%20si%20se%20puede%20restaurar%20una%20pieza.%20Adjunto%20fotografías%20y%20medidas%20aproximadas.";
-const courseMail = "mailto:hola@mimuebleria.es?subject=Consulta%20sobre%20cursos%20de%20restauración&body=Hola%2C%20quiero%20información%20sobre%20los%20cursos%20de%20restauración%20y%20las%20próximas%20plazas.";
+const quoteWhatsApp = "https://wa.me/34619842164?text=Hola%2C%20quiero%20consultaros%20si%20se%20puede%20restaurar%20una%20pieza.%20Os%20env%C3%ADo%20unas%20fotograf%C3%ADas%20y%20las%20medidas%20aproximadas.";
+const courseWhatsApp = "https://wa.me/34619842164?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20restauraci%C3%B3n%20y%20las%20pr%C3%B3ximas%20plazas.";
+const gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=hola%40mimuebleria.es&su=Consulta%20desde%20la%20web";
 
 function Arrow() {
   return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h15M14 7l5 5-5 5" /></svg>;
@@ -19,7 +20,7 @@ export default function Home() {
           <a href="#cursos">Cursos</a>
           <a href="#taller">El taller</a>
         </nav>
-        <a className="nav-cta" href={quoteMail}>Valorar mi pieza <Arrow /></a>
+        <a className="nav-cta" href={quoteWhatsApp} target="_blank" rel="noreferrer">Valorar mi pieza <Arrow /></a>
       </header>
 
       <section className="hero" id="inicio">
@@ -28,7 +29,7 @@ export default function Home() {
           <h1>ESE MUEBLE<br />NO ESTÁ<br /><em>PARA TIRAR.</em></h1>
           <div className="hero-bottom">
             <p>Envíanos unas fotos. Miramos la pieza, te contamos qué merece la pena conservar y cómo devolverla a casa.</p>
-            <a className="button button-dark" href={quoteMail}>Enviar fotos de mi pieza <Arrow /></a>
+            <a className="button button-dark" href={quoteWhatsApp} target="_blank" rel="noreferrer">Enviar fotos por WhatsApp <Arrow /></a>
           </div>
         </div>
         <div className="hero-visual">
@@ -50,7 +51,7 @@ export default function Home() {
             <h2>Quiero<br />recuperarla.</h2>
           </div>
           <p>Restauración, reparación, ebanistería y tapicería. Empezamos por conocer el estado real del mueble.</p>
-          <a href={quoteMail}>Pedir una valoración <Arrow /></a>
+          <a href={quoteWhatsApp} target="_blank" rel="noreferrer">Pedir una valoración <Arrow /></a>
         </article>
         <article className="choice choice-blue" id="cursos">
           <span className="choice-number">B</span>
@@ -59,7 +60,7 @@ export default function Home() {
             <h2>Quiero hacerlo<br />con mis manos.</h2>
           </div>
           <p>Cursos mensuales y talleres personalizados para trabajar sobre una pieza y aprender cada paso.</p>
-          <a href={courseMail}>Consultar próximas plazas <Arrow /></a>
+          <a href={courseWhatsApp} target="_blank" rel="noreferrer">Consultar próximas plazas <Arrow /></a>
         </article>
       </section>
 
@@ -111,7 +112,7 @@ export default function Home() {
           <div className="section-index light"><span>04</span><p>AL OTRO LADO DE LA MESA</p></div>
           <blockquote>“Primero entendemos la pieza. Luego decidimos qué necesita.”</blockquote>
           <p>Miriam Lasaosa dirige el taller y acompaña tanto los encargos profesionales como el aprendizaje en la escuela.</p>
-          <a href={courseMail}>Quiero conocer los cursos <Arrow /></a>
+          <a href={courseWhatsApp} target="_blank" rel="noreferrer">Quiero conocer los cursos <Arrow /></a>
         </div>
       </section>
 
@@ -129,7 +130,8 @@ export default function Home() {
       <section className="contact">
         <div className="contact-title"><p>¿TIENES UNA PIEZA EN MENTE?</p><h2>Hazle tres fotos.<br /><em>Empezamos por ahí.</em></h2></div>
         <div className="contact-actions">
-          <a className="button button-cream" href={quoteMail}>Enviar fotos de mi pieza <Arrow /></a>
+          <a className="button button-cream" href={quoteWhatsApp} target="_blank" rel="noreferrer">Enviar fotos por WhatsApp <Arrow /></a>
+          <a href={gmailUrl} target="_blank" rel="noreferrer">Prefiero escribir por email <Arrow /></a>
           <a href="tel:+34619842164">Llamar al 619 842 164 <Arrow /></a>
         </div>
       </section>
@@ -137,7 +139,7 @@ export default function Home() {
       <footer>
         <a className="brand brand-footer" href="#inicio"><span>MI</span><strong>MUEBLERÍA</strong><i>· MADRID</i></a>
         <div><span>TALLER</span><a href="https://www.google.com/maps/search/?api=1&query=Mi+Mueblería+Calle+del+Buen+Suceso+20+Madrid" target="_blank" rel="noreferrer">Calle del Buen Suceso, 20<br />28008 Madrid</a></div>
-        <div><span>CONTACTO</span><a href="mailto:hola@mimuebleria.es">hola@mimuebleria.es</a><a href="tel:+34619842164">619 842 164</a></div>
+        <div><span>CONTACTO</span><a href={gmailUrl} target="_blank" rel="noreferrer">hola@mimuebleria.es</a><a href="tel:+34619842164">619 842 164</a></div>
         <p>Restauración · Ebanistería · Cursos</p>
       </footer>
     </main>
