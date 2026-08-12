@@ -113,7 +113,7 @@ svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width:
 .contact h2 em { color: var(--ink); }
 .contact-actions { display: grid; gap: 20px; }
 .button-cream { background: var(--cream); color: var(--ink); }
-.contact-actions > a:last-child { display: flex; justify-content: space-between; border-top: 1px solid currentColor; padding-top: 17px; font-size: 12px; font-weight: 800; }
+.contact-actions > a:not(.button) { display: flex; justify-content: space-between; border-top: 1px solid currentColor; padding-top: 17px; font-size: 12px; font-weight: 800; }
 
 footer { background: var(--ink); color: var(--cream); min-height: 270px; padding: 55px 3.1vw; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 50px; position: relative; }
 .brand-footer { align-self: start; }
