@@ -5,9 +5,10 @@ import { URL } from "node:url";
 
 test("la página conserva las rutas de conversión principales", async () => {
   const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
-  assert.match(source, /mailto:hola@mimuebleria.es/);
+  assert.match(source, /https:\/\/wa.me\/34619842164/);
+  assert.match(source, /https:\/\/mail.google.com\/mail\//);
   assert.match(source, /tel:\+34619842164/);
-  assert.match(source, /Enviar fotos de mi pieza/);
+  assert.match(source, /Enviar fotos por WhatsApp/);
   assert.match(source, /Consultar próximas plazas/);
 });
 
